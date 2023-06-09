@@ -29,7 +29,7 @@
 
   
 
-<link rel="canonical" href="https://xiaoyu107719.github.io/archives/">
+<link rel="canonical" href="https://xiaoyu107719.github.io/2023/06/09/vuerouter/">
 
 
 
@@ -60,8 +60,19 @@
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">归档
+  <h1 itemprop="name headline">Vue路由相关知识概念
   </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-06-09 22:46:01">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-06-09T22:46:01+08:00">2023-06-09</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -91,12 +102,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
-          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
-          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://image.baidu.com/search/down?url=https://lz.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
         </ul>
       </div>
     <div id="waves">
@@ -117,31 +128,103 @@
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item header">
-          <a href="/">首页</a> <small>/</small>
-          目前共计 3 篇文章。 <small class="cheers">嗯.. 继续努力。</small>
-    </h2>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
 
-          <h3 class="item section">
-            <a href="/archives/2023">2023 年</a><small>/</small><a href="/archives/2023/06">06 月</a>
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://xiaoyu107719.github.io/2023/06/09/vuerouter/">
 
-      
+<span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="http://q1.qlogo.cn/g?b=qq&nk=43190360&s=4">
+  <meta itemprop="name" content="小鱼程序员">
+  <meta itemprop="description" content=", ">
+</span>
 
-      
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="前端小鱼">
+  </span>
 
-      
-        <small>( 3 )</small>
-      </h3>
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p align="center">Vue路由相关知识概念</p>
+
+<p>一、路由是什么？<br>Vue中的路由就是.SPA（single page application 单页应用程序） 的路径管理器。</p>
+<p>vue-router是Vue.js官方的路由插件，用于构建单页面应用。vue的单页面应用是基于路由和组件的，设定访问路径，并将路径和组件映射起来。在vue-router单页面应用中，路径之间的切换，就是组件的切换。路由模块的本质就是建立起url和页面之间的映射关系。</p>
+<p>二、Vue2中路由的创建步骤<br>1.安装正确的路由版本（这里我踩坑了）<br>1.首先安装vue-router的时候需要确定版本。 Vue2.0采用的 vue-router 版本为 @^3.5.1</p>
+<p>npm i vue-router@^3.5.1 -s  &#x2F;&#x2F; Vue2安装的方式<br>1<br>2.直接 npm i vue-router -s 这种方式安装会安装最新版本（适用于Vue3）</p>
+<p>npm i vue-router -s  &#x2F;&#x2F;Vue3安装的方式<br>1<br>2.vue2中配置路由的步骤<br>步骤如下：<br>1.安装 <span class="exturl" data-url="bWFpbHRvOiYjMTE4OyYjeDc1OyYjMTAxOyYjNDU7JiN4NzI7JiMxMTE7JiMxMTc7JiMxMTY7JiN4NjU7JiN4NzI7JiN4NDA7JiN4MzM7JiM0NjsmIzUzOyYjNDY7JiM0OTs=">&#118;&#x75;&#101;&#45;&#x72;&#111;&#117;&#116;&#x65;&#x72;&#x40;&#x33;&#46;&#53;&#46;&#49;</span><br>2.创建 router文件夹 并创建 index.js<br>3.引入VueRouter 和 Vue<br>4.Vue.use(VueRouter)<br>5.创建VueRouter实例： const router &#x3D; new VueRouter（{ routes}）<br>6.配置routes （结构如下图所示）<br>7.导出router<br>8. 在main.js中导入刚才的 router<br>9.注册router<br>10.创建 router-link 和 router-view</p>
+<p>&#x2F;&#x2F;1.导入VueRouter<br>import Vue from “vue”;<br>import VueRouter from ‘vue-router’<br>import HelloWord from “..&#x2F;components&#x2F;HelloWorld.vue”;<br>&#x2F;&#x2F;2.使用路由<br>Vue.use(VueRouter);<br>&#x2F;&#x2F;3.创建VueRouter的实例<br>const router &#x3D; new VueRouter({<br>    &#x2F;&#x2F;tips:不想要 #（锚点）就添加下面代码<br>     mode:’history’,<br>    &#x2F;&#x2F;4.配置路由的path和组件<br>    routes :[<br>        {<br>          path: “&#x2F;“,<br>          name:’home’,<br>          component: HelloWord,<br>        },<br>        {<br>          path: “&#x2F;about”,<br>          name:’anout’,<br>          component: () &#x3D;&gt; import(“..&#x2F;components&#x2F;About.vue”),<br>        },<br>      ]<br>})<br>&#x2F;&#x2F;5.导入路由实例<br>export default router</p>
+<p>入口文件代码：</p>
+<p>import Vue from ‘vue’<br>import App from ‘.&#x2F;App.vue’<br>&#x2F;&#x2F;6.引入导出的路由<br>import router from ‘.&#x2F;router&#x2F;index’</p>
+<p>Vue.config.productionTip &#x3D; false</p>
+<p>new Vue({<br>  &#x2F;&#x2F;7.注册路由<br>  router,<br>  render: h &#x3D;&gt; h(App),<br>}).$mount(‘#app’)</p>
+
   </div>
 
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-06-09 22:49:18" itemprop="dateModified" datetime="2023-06-09T22:49:18+08:00">2023-06-09</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>小鱼程序员 <i class="ic i-at"><em>@</em></i>前端小鱼
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://xiaoyu107719.github.io/2023/06/09/vuerouter/" title="Vue路由相关知识概念">https://xiaoyu107719.github.io/2023/06/09/vuerouter/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
 
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/06/09/cs/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;image.baidu.com&#x2F;search&#x2F;down?url&#x3D;https:&#x2F;&#x2F;lz.sinaimg.cn&#x2F;large&#x2F;6833939bly1gipeyhsblkj20zk0m81kx.jpg" title="当雨丝淋湿了思念">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>当雨丝淋湿了思念</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
 
 
         </div>
         <div id="sidebar">
           
+
 <div class="inner">
 
   <div class="panels">
@@ -221,6 +304,7 @@
   </ul>
 </div>
 
+
         </div>
         <div class="dimmer"></div>
       </div>
@@ -238,15 +322,6 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/09/hello-world/" title="Hello World">Hello World</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2023/06/09/vuerouter/" title="Vue路由相关知识概念">Vue路由相关知识概念</a></span>
   </li>
 
@@ -257,6 +332,15 @@
 </div>
 
     <span><a href="/2023/06/09/cs/" title="当雨丝淋湿了思念">当雨丝淋湿了思念</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/06/09/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
   </ul>
@@ -297,7 +381,7 @@
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'archives/',
+    path: '2023/06/09/vuerouter/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
